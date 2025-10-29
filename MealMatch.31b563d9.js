@@ -207,7 +207,7 @@
       });
     }
   }
-})({"hO0SB":[function(require,module,exports,__globalThis) {
+})({"5j6Kf":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -724,9 +724,9 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _indexCss = require("./index.css");
-var _reactRouterDom = require("react-router-dom");
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
+var _reactRouterDom = require("react-router-dom");
 var _mealDetails = require("./components/MealDetails");
 var _mealDetailsDefault = parcelHelpers.interopDefault(_mealDetails);
 var _home = require("./components/Home");
@@ -735,7 +735,7 @@ var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _resultsPage = require("./components/ResultsPage");
 var _resultsPageDefault = parcelHelpers.interopDefault(_resultsPage);
-// Layout for all pages
+// Layout stays same
 const Layout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
@@ -761,7 +761,7 @@ const Layout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         columnNumber: 3
     }, undefined);
 _c = Layout;
-// Error Page
+// Error Page stays same
 const ErrorPage = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "text-center mt-20 text-red-600 text-xl font-bold",
         children: "\u274C Page Not Found!"
@@ -771,65 +771,98 @@ const ErrorPage = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         columnNumber: 3
     }, undefined);
 _c1 = ErrorPage;
-const router = (0, _reactRouterDom.createBrowserRouter)([
-    {
-        path: "/",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Layout, {}, void 0, false, {
+const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Layout, {}, void 0, false, {
+                    fileName: "src/index.js",
+                    lineNumber: 30,
+                    columnNumber: 32
+                }, void 0),
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        index: true,
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
+                            fileName: "src/index.js",
+                            lineNumber: 31,
+                            columnNumber: 31
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "results",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultsPageDefault.default), {}, void 0, false, {
+                            fileName: "src/index.js",
+                            lineNumber: 32,
+                            columnNumber: 40
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.js",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "meal/:id",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mealDetailsDefault.default), {}, void 0, false, {
+                            fileName: "src/index.js",
+                            lineNumber: 33,
+                            columnNumber: 41
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "*",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ErrorPage, {}, void 0, false, {
+                            fileName: "src/index.js",
+                            lineNumber: 34,
+                            columnNumber: 34
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/index.js",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 30,
-            columnNumber: 14
-        }, undefined),
-        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ErrorPage, {}, void 0, false, {
-            fileName: "src/index.js",
-            lineNumber: 31,
-            columnNumber: 19
-        }, undefined),
-        children: [
-            {
-                index: true,
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
-                    fileName: "src/index.js",
-                    lineNumber: 33,
-                    columnNumber: 31
-                }, undefined)
-            },
-            {
-                path: "results",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultsPageDefault.default), {}, void 0, false, {
-                    fileName: "src/index.js",
-                    lineNumber: 34,
-                    columnNumber: 35
-                }, undefined)
-            },
-            {
-                path: "meal/:id",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mealDetailsDefault.default), {}, void 0, false, {
-                    fileName: "src/index.js",
-                    lineNumber: 35,
-                    columnNumber: 36
-                }, undefined)
-            } // Meal Details page
-        ]
-    }
-]);
+            lineNumber: 29,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/index.js",
+        lineNumber: 28,
+        columnNumber: 3
+    }, undefined);
+_c2 = App;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
-    router: router
-}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 42,
+    lineNumber: 41,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
+var _c, _c1, _c2;
 $RefreshReg$(_c, "Layout");
 $RefreshReg$(_c1, "ErrorPage");
+$RefreshReg$(_c2, "App");
 
   $parcel$ReactRefreshHelpers$3cdc.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react-dom/client":"hrvwu","./components/Header":"8BCUx","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o","react-router-dom":"61z4w","./components/Home":"1uVE5","./components/MealDetails":"5DqsI","./components/ResultsPage":"blomg"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react-dom/client":"hrvwu","./components/Header":"8BCUx","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w","./components/Home":"1uVE5","./components/MealDetails":"5DqsI","./components/ResultsPage":"blomg"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -17496,31 +17529,38 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constantsJsx = require("../Utils/constants.jsx");
 const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shadow-md flex fixed top-0 left-0 w-full bg-white",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _constantsJsx.APP_LOGO),
-                alt: "App Logo",
-                className: "w-26 h-24"
-            }, void 0, false, {
-                fileName: "src/components/Header.jsx",
-                lineNumber: 5,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-4xl font-bold m-6 text-orange-400",
-                children: "Meal Match"
-            }, void 0, false, {
-                fileName: "src/components/Header.jsx",
-                lineNumber: 6,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "fixed top-0 left-0 w-full bg-white shadow-md z-50",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex items-center justify-center sm:justify-start gap-4 px-4 py-3",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _constantsJsx.APP_LOGO),
+                    alt: "App Logo",
+                    className: "w-20 h-20 object-contain sm:w-24 sm:h-24"
+                }, void 0, false, {
+                    fileName: "src/components/Header.jsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "text-2xl sm:text-4xl font-bold text-orange-400",
+                    children: "Meal Match"
+                }, void 0, false, {
+                    fileName: "src/components/Header.jsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Header.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/Header.jsx",
-        lineNumber: 4,
-        columnNumber: 3
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Header;
@@ -17533,7 +17573,7 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../Utils/constants.jsx":"2fQm6","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o"}],"2fQm6":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../Utils/constants.jsx":"2fQm6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2fQm6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "APP_LOGO", ()=>APP_LOGO);
@@ -17541,7 +17581,7 @@ parcelHelpers.export(exports, "BackGROUND", ()=>BackGROUND);
 const APP_LOGO = "data:image/png;base64,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";
 const BackGROUND = "https://img.freepik.com/premium-photo/clay-dishes-plate-top-view-free-space-your-text_187166-14624.jpg";
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh"}],"hwrOh":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -17571,9 +17611,9 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"bhD8o":[function(require,module,exports,__globalThis) {
+},{}],"7h6Pi":[function(require,module,exports,__globalThis) {
 "use strict";
-var Refresh = require("b50ebfd0121d760d");
+var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -17611,7 +17651,7 @@ module.exports.init = function() {
             };
         };
         if (typeof window !== 'undefined') {
-            let ErrorOverlay = require("a443a1ca7bc7576");
+            let ErrorOverlay = require("e4d875b7642f9496");
             ErrorOverlay.setEditorHandler(function(errorLocation) {
                 let file = `${errorLocation.fileName}:${errorLocation.lineNumber || 1}:${errorLocation.colNumber || 1}`;
                 fetch(module.bundle.devServer + `/__parcel_launch_editor?file=${encodeURIComponent(file)}`);
@@ -17734,11 +17774,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"b50ebfd0121d760d":"bVem9","a443a1ca7bc7576":"85Pzp"}],"bVem9":[function(require,module,exports,__globalThis) {
+},{"7422ead32dcc1e6b":"hpiFP","e4d875b7642f9496":"gnoim"}],"hpiFP":[function(require,module,exports,__globalThis) {
 'use strict';
-module.exports = require("3190b25bb2e17645");
+module.exports = require("96622d495519d4e");
 
-},{"3190b25bb2e17645":"fXfyq"}],"fXfyq":[function(require,module,exports,__globalThis) {
+},{"96622d495519d4e":"7AD9f"}],"7AD9f":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * react-refresh-runtime.development.js
@@ -17974,7 +18014,7 @@ module.exports = require("3190b25bb2e17645");
     exports.setSignature = setSignature;
 })();
 
-},{}],"85Pzp":[function(require,module,exports,__globalThis) {
+},{}],"gnoim":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setEditorHandler", ()=>$da9882e673ac146b$export$25a22ac46f1bd016);
@@ -19849,7 +19889,7 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh"}],"irmnC":[function() {},{}],"61z4w":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"irmnC":[function() {},{}],"61z4w":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.30.1
  *
@@ -21301,7 +21341,7 @@ let savedScrollPositions = {};
     return (0, _router.matchPath)(path.pathname, nextPath) != null || (0, _router.matchPath)(path.pathname, currentPath) != null;
 }
 
-},{"react":"jMk1U","react-dom":"i4X7T","react-router":"4ChVy","@remix-run/router":"2GHDR","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh"}],"4ChVy":[function(require,module,exports,__globalThis) {
+},{"react":"jMk1U","react-dom":"i4X7T","react-router":"4ChVy","@remix-run/router":"2GHDR","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4ChVy":[function(require,module,exports,__globalThis) {
 /**
  * React Router v6.30.1
  *
@@ -22604,7 +22644,7 @@ function createMemoryRouter(routes, opts) {
     }).initialize();
 }
 
-},{"react":"jMk1U","@remix-run/router":"2GHDR","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh"}],"2GHDR":[function(require,module,exports,__globalThis) {
+},{"react":"jMk1U","@remix-run/router":"2GHDR","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"2GHDR":[function(require,module,exports,__globalThis) {
 /**
  * @remix-run/router v1.23.0
  *
@@ -27079,7 +27119,7 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh"}],"1uVE5":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1uVE5":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$a0a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$a0a8.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27137,7 +27177,7 @@ $RefreshReg$(_c, "Home");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./Body":"c4zl2","./Search":"kKE59","./SearchMethod":"ah6oP","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o","react":"jMk1U"}],"c4zl2":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./Body":"c4zl2","./Search":"kKE59","./SearchMethod":"ah6oP","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"c4zl2":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$3c85 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$3c85.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27189,7 +27229,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../Utils/constants":"2fQm6","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o"}],"kKE59":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../Utils/constants":"2fQm6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kKE59":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$50fd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$50fd.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27209,7 +27249,7 @@ const Search = ({ selectedMethod })=>{
     const navigate = (0, _reactRouterDom.useNavigate)();
     const handleSubmit = (e)=>{
         e.preventDefault();
-        if (!input.trim()) return;
+        if (!input.trim() || !selectedMethod) return;
         let apiUrl = "";
         switch(selectedMethod){
             case "ingredient":
@@ -27227,13 +27267,13 @@ const Search = ({ selectedMethod })=>{
         navigate(`/results?api=${encodeURIComponent(apiUrl)}`);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-col items-center mt-10",
+        className: "flex flex-col items-center mt-4 px-4 mb-8 sm:mb-0",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-            className: "flex items-center gap-2",
+            className: "flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto",
             onSubmit: handleSubmit,
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "relative",
+                    className: "relative w-full sm:w-72",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                             className: "absolute left-3 top-1/2 -translate-y-1/2 text-white",
@@ -27245,8 +27285,9 @@ const Search = ({ selectedMethod })=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                             type: "text",
-                            className: "bg-orange-400 placeholder-orange-200 text-white pl-10 pr-3 py-2 rounded-lg focus:outline-none w-72",
-                            placeholder: `Search by ${selectedMethod}`,
+                            className: "bg-orange-400 placeholder-orange-200 text-white pl-10 pr-3 py-2 rounded-lg focus:outline-none w-full",
+                            placeholder: selectedMethod ? `Search by ${selectedMethod}` : "Select a method first",
+                            disabled: !selectedMethod,
                             value: input,
                             onChange: (e)=>setInput(e.target.value)
                         }, void 0, false, {
@@ -27262,11 +27303,12 @@ const Search = ({ selectedMethod })=>{
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     type: "submit",
-                    className: "bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition",
+                    disabled: !selectedMethod,
+                    className: `px-5 py-2 rounded-lg transition ${selectedMethod ? "bg-orange-500 hover:bg-orange-600 text-white" : "bg-gray-300 text-gray-600 cursor-not-allowed"}`,
                     children: "Search"
                 }, void 0, false, {
                     fileName: "src/components/Search.jsx",
-                    lineNumber: 49,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -27296,7 +27338,7 @@ $RefreshReg$(_c, "Search");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o","react-router-dom":"61z4w"}],"ah6oP":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w"}],"ah6oP":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$8775 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$8775.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27381,7 +27423,7 @@ $RefreshReg$(_c, "SearchMethod");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o"}],"5DqsI":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5DqsI":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$8273 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$8273.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27599,7 +27641,7 @@ $RefreshReg$(_c, "MealDetails");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o"}],"blomg":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"blomg":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0803 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$0803.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27729,6 +27771,6 @@ $RefreshReg$(_c, "ResultsPage");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"hwrOh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bhD8o"}]},["hO0SB","a0t4e"], "a0t4e", "parcelRequire164e", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-router-dom":"61z4w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire164e", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=MealMatch.31b563d9.js.map
